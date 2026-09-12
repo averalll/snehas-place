@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact us · Sneha’s Place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=contact-btn1" />
+  </head>
+  <body class="page-inner page-contact">
+    <div class="panel panel-nav">
+      <a class="logo" href="entrance.html"><img src="assets/logo-script.png" alt="Sneha’s Place" width="950" height="136" /></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About me</a>
+        <a href="contact.html" aria-current="page">Contact us</a>
+      </nav>
+    </div>
+
+    <main class="inner-main contact-main">
+      <div class="contact-copy">
+        <h1 class="visually-hidden">Contact us</h1>
+        <p class="lede">
+          Ring the doorbell. Say hello, pitch a collaboration, or ask about a
+          script.
+        </p>
+        <form class="contact-form" action="mailto:hello@snehasplace.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Subject
+            <input type="text" name="subject" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send a note</button>
+        </form>
+      </div>
+      <div class="contact-picture">
+        <img
+          src="assets/contact-v2.png"
+          alt="A picnic blanket with a flip phone, camera, strawberries, cards, a sandwich, and a tote bag"
+          width="576"
+          height="1024"
+        />
+      </div>
+    </main>
+  </body>
+</html>
