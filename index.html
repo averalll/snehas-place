@@ -14,12 +14,17 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=note-r4" />
+    <link rel="stylesheet" href="css/styles.css?v=window-note1" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-house">
     <header class="site-header">
       <a class="logo" href="entrance.html"><img src="assets/logo-script.png" alt="Sneha’s Place" width="950" height="136" /></a>
-      <nav class="site-nav" aria-label="Primary">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
         <a href="work.html">Work</a>
         <a href="about.html">About me</a>
@@ -50,6 +55,10 @@
             I didn’t care for this until I saw it in real life. It was
             mesmerizing
           </span>
+        </button>
+        <button class="room-hotspot living-window" type="button">
+          <span class="visually-hidden">A note about the window</span>
+          <span class="room-note">I am from Goa, and this makes me feel at home</span>
         </button>
         <button class="room-hotspot living-drink" type="button">
           <span class="visually-hidden">A note about the piña colada</span>
@@ -106,7 +115,51 @@
           <img src="assets/room-bedroom-v4.png" alt="" width="1024" height="576" />
         </a>
         <span class="house-caption">Sneha’s bedroom</span>
+        <button class="room-hotspot bedroom-hsm" type="button">
+          <span class="visually-hidden">A note about the High School Musical poster</span>
+          <span class="room-note">
+            HIGH SCHOOL MUSICAL: Definitely formative for me — I used to
+            recreate scenes with my cousin where I was Troy and she was
+            Gabriella. A tween OBSESSION
+          </span>
+        </button>
+        <button class="room-hotspot bedroom-tsitp" type="button">
+          <span class="visually-hidden">A note about The Summer I Turned Pretty poster</span>
+          <span class="room-note">
+            I loved an obsession, as you can tell, and I love a fandom — I am
+            part of all of them — but I love nothing more than a show that has
+            the soundtrack to capture the exact moment of time we are in, and
+            hence I think that show makes me feel in 2026 the same way One Tree
+            Hill made me feel in the 2000s
+          </span>
+        </button>
+        <button class="room-hotspot bedroom-lemonade" type="button">
+          <span class="visually-hidden">A note about the Beyoncé Lemonade poster</span>
+          <span class="room-note">
+            This concept album made me take high-concept music videos seriously,
+            like they were short films
+          </span>
+        </button>
       </div>
     </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="logo" href="entrance.html"><img src="assets/logo-script.png" alt="Sneha’s Place" width="950" height="136" /></a>
+        <p class="footer-desc">A front door and a workspace for screenwriter + producer Sneha Mendes.</p>
+      </div>
+      <nav class="site-social" aria-label="Social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm9.2 1.3a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 8.2A3.8 3.8 0 1 1 12 15.8 3.8 3.8 0 0 1 12 8.2Zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6Z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 3.2A2.2 2.2 0 1 1 5.4 7.6 2.2 2.2 0 0 1 5.4 3.2ZM3.6 9h3.6v12H3.6zM10.2 9h3.4v1.7h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5V21h-3.6v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21h-3.6z"/></svg>
+        </a>
+        <a href="#" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 3h5.1l4 5.7L16.9 3H21l-6.6 8.4L21.4 21h-5.1l-4.4-6.2L6.8 21H3l7-8.9L3.4 3Z"/></svg>
+        </a>
+      </nav>
+    </footer>
+    <script src="js/site-menu.js"></script>
+    <script src="js/room-enter.js"></script>
   </body>
 </html>
