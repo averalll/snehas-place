@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact us · Sneha’s Place</title>
+    <title>Say Hi! · Sneha’s Place</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=contact-hug4" />
+    <link rel="stylesheet" href="css/styles.css?v=contact-v3" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-inner page-contact">
@@ -24,13 +24,13 @@
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
         <a href="about.html">About me</a>
-        <a href="contact.html" aria-current="page">Contact us</a>
+        <a href="contact.html" aria-current="page">Say Hi!</a>
       </nav>
     </div>
 
     <main class="inner-main contact-main">
       <div class="contact-copy">
-        <h1 class="visually-hidden">Contact us</h1>
+        <h1 class="visually-hidden">Say Hi!</h1>
         <p class="lede">
           Ring the doorbell. Say hello, pitch a collaboration, or ask about a
           script.
@@ -54,12 +54,19 @@
           </label>
           <button type="submit">Send a note</button>
         </form>
+        <div class="contact-direct">
+          <p>Or email Sneha directly</p>
+          <div class="email-copy">
+            <a href="mailto:hello@snehasplace.com">hello@snehasplace.com</a>
+            <button type="button" class="copy-email" data-copy="hello@snehasplace.com">Copy</button>
+          </div>
+        </div>
       </div>
       <div class="contact-picture">
         <img
-          src="assets/contact-v2.png"
-          alt="A picnic blanket with a flip phone, camera, strawberries, cards, a sandwich, and a tote bag"
-          width="576"
+          src="assets/contact-v3.jpg"
+          alt="A picnic blanket with a camera, Interview magazine, strawberries, gin, and a Lego race car"
+          width="1024"
           height="1024"
         />
       </div>
@@ -82,5 +89,6 @@
       </nav>
     </footer>
     <script src="js/site-menu.js"></script>
+    <script src="js/copy-email.js"></script>
   </body>
 </html>

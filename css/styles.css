@@ -480,6 +480,74 @@ a {
   background: var(--yellow-deep);
 }
 
+.contact-direct {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+}
+
+.contact-direct p {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+}
+
+.email-copy {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55rem;
+}
+
+.email-copy a {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0.75rem;
+  background: #fff;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.email-copy a:hover,
+.email-copy a:focus-visible {
+  background: #fff6dc;
+}
+
+.email-copy a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.copy-email {
+  appearance: none;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.55rem 1.05rem 0.6rem;
+  background: var(--yellow);
+  color: var(--ink);
+  border: 2.5px solid var(--ink);
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 3px 4px 0 var(--ink);
+}
+
+.copy-email:hover,
+.copy-email:focus-visible {
+  background: var(--yellow-deep);
+}
+
+.copy-email:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
 .back-out {
   display: inline-block;
   margin-top: 2rem;
@@ -1398,7 +1466,7 @@ a {
   }
 
   .entrance-image {
-    object-position: center;
+    object-position: 72% 42%;
   }
 
   .entrance .entrance-overlay {
@@ -1407,12 +1475,17 @@ a {
   }
 
   .entrance .entrance-cta {
+    top: auto;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: auto;
+    max-width: none;
     white-space: normal;
     text-align: center;
-    max-width: calc(100% - 2rem);
     padding: 0.8rem 1.3rem;
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+    transform: none;
   }
 
   .room-enter .entrance-cta {
