@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=contact-v3" />
+    <link rel="stylesheet" href="css/styles.css?v=contact-caption1" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-inner page-contact">
@@ -45,8 +45,13 @@
             <input type="email" name="email" autocomplete="email" required />
           </label>
           <label>
-            Subject
-            <input type="text" name="subject" required />
+            What’s this about?
+            <select name="subject" required>
+              <option value="" disabled selected>Pick one</option>
+              <option value="Say hello">Say hello</option>
+              <option value="Pitch a collaboration">Pitch a collab</option>
+              <option value="Ask about a script">Ask about a script</option>
+            </select>
           </label>
           <label>
             Message
@@ -54,21 +59,26 @@
           </label>
           <button type="submit">Send a note</button>
         </form>
-        <div class="contact-direct">
-          <p>Or email Sneha directly</p>
-          <div class="email-copy">
-            <a href="mailto:hello@snehasplace.com">hello@snehasplace.com</a>
-            <button type="button" class="copy-email" data-copy="hello@snehasplace.com">Copy</button>
-          </div>
-        </div>
+        <p class="contact-direct">
+          Or email Sneha directly
+          <a href="mailto:hello@snehasplace.com">hello@snehasplace.com</a>
+          <button type="button" class="copy-email" data-copy="hello@snehasplace.com" aria-label="Copy email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h10a2 2 0 0 1 2 2v12h-2V5H9V3Zm-4 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v12h10V9H5Z"/></svg>
+          </button>
+          <span class="copy-flash" aria-live="polite"></span>
+        </p>
+        <p class="contact-success" hidden tabindex="-1">
+          Note’s on the doormat. I’ll get back to you soon.
+        </p>
       </div>
       <div class="contact-picture">
         <img
-          src="assets/contact-v3.jpg"
-          alt="A picnic blanket with a camera, Interview magazine, strawberries, gin, and a Lego race car"
+          src="assets/contact-v4.jpg"
+          alt="A beach picnic with an Interview magazine, Red Bull, gin, and a Lego race car"
           width="1024"
           height="1024"
         />
+        <span class="house-caption">Beach picnic in Goa</span>
       </div>
     </main>
     <footer class="site-footer">
@@ -90,5 +100,6 @@
     </footer>
     <script src="js/site-menu.js"></script>
     <script src="js/copy-email.js"></script>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=footer3" />
+    <link rel="stylesheet" href="css/styles.css?v=work-cards7" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-work">
@@ -29,66 +29,88 @@
     </header>
 
     <div class="work-filters" role="group" aria-label="Filter work by role">
-      <button type="button" class="chip" data-filter="producer" aria-pressed="false">
+      <button type="button" class="chip" data-filter="producer" aria-pressed="true">
         Producer
       </button>
       <button type="button" class="chip" data-filter="writing" aria-pressed="false">
-        Writing
+        Writer
       </button>
     </div>
 
-    <article class="work-card" data-roles="producer">
-      <a class="work-card-link" href="project-lioness.html">
-        <img
-          src="assets/work-1.png"
-          alt="Production still from Vanity Fair x Lioness Season 2"
-          width="492"
-          height="218"
-        />
-        <div class="work-card-meta">
-          <h2>On File: Vanity Fair x Lioness S2</h2>
-          <p class="work-card-credits">
-            Production Company: Wayward Three Films<br />
-            Director: Lauren Bennett<br />
-            Co-Producer: Sneha Mendes
-          </p>
-        </div>
-      </a>
-    </article>
+    <div class="work-grid">
+      <article class="work-card" data-roles="producer">
+        <a class="work-card-link" href="project-lioness.html">
+          <div class="work-card-copy">
+            <h2>Vanity Fair x Lioness S2</h2>
+            <p class="work-card-desc">A Vanity Fair film for Lioness Season 2.</p>
+            <p class="work-card-credits">
+              Wayward Three Films<br />
+              Dir. Lauren Bennett
+            </p>
+            <p class="work-card-roles">
+              <span class="role-tag">Co-Producer</span>
+            </p>
+          </div>
+          <div class="work-card-still">
+            <img
+              src="assets/work-1.png"
+              alt="Production still from Vanity Fair x Lioness Season 2"
+              width="492"
+              height="218"
+            />
+          </div>
+        </a>
+      </article>
 
-    <article class="work-card" data-roles="writing">
-      <img
-        src="assets/work-2.png"
-        alt="Production still from Vanity Fair x Lioness Season 2"
-        width="492"
-        height="218"
-      />
-      <div class="work-card-meta">
-        <h2>On File: Vanity Fair x Lioness S2</h2>
-        <p class="work-card-credits">
-          Production Company: Wayward Three Films<br />
-          Director: Lauren Bennett<br />
-          Writer: Sneha Mendes
-        </p>
-      </div>
-    </article>
+      <article class="work-card" data-roles="writing">
+        <a class="work-card-link" href="project-lioness.html">
+          <div class="work-card-copy">
+            <h2>Vanity Fair x Lioness S2</h2>
+            <p class="work-card-desc">A Vanity Fair film for Lioness Season 2.</p>
+            <p class="work-card-credits">
+              Wayward Three Films<br />
+              Dir. Lauren Bennett
+            </p>
+            <p class="work-card-roles">
+              <span class="role-tag">Writer</span>
+            </p>
+          </div>
+          <div class="work-card-still">
+            <img
+              src="assets/work-2.png"
+              alt="Production still from Vanity Fair x Lioness Season 2"
+              width="492"
+              height="218"
+            />
+          </div>
+        </a>
+      </article>
 
-    <article class="work-card" data-roles="producer writing">
-      <img
-        src="assets/work-3.png"
-        alt="Production still from Vanity Fair x Lioness Season 2"
-        width="492"
-        height="214"
-      />
-      <div class="work-card-meta">
-        <h2>On File: Vanity Fair x Lioness S2</h2>
-        <p class="work-card-credits">
-          Production Company: Wayward Three Films<br />
-          Director: Lauren Bennett<br />
-          Co-Producer &amp; Writer: Sneha Mendes
-        </p>
-      </div>
-    </article>
+      <article class="work-card" data-roles="producer writing">
+        <a class="work-card-link" href="project-lioness.html">
+          <div class="work-card-copy">
+            <h2>Vanity Fair x Lioness S2</h2>
+            <p class="work-card-desc">A Vanity Fair film for Lioness Season 2.</p>
+            <p class="work-card-credits">
+              Wayward Three Films<br />
+              Dir. Lauren Bennett
+            </p>
+            <p class="work-card-roles">
+              <span class="role-tag">Co-Producer</span>
+              <span class="role-tag">Writer</span>
+            </p>
+          </div>
+          <div class="work-card-still">
+            <img
+              src="assets/work-3.png"
+              alt="Production still from Vanity Fair x Lioness Season 2"
+              width="492"
+              height="214"
+            />
+          </div>
+        </a>
+      </article>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-brand">

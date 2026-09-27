@@ -1,5 +1,19 @@
 document.querySelectorAll(".copy-email").forEach((button) => {
-  const original = button.textContent;
+  const flash = button.parentElement.querySelector(".copy-flash");
+  let flashTimer = 0;
+
+  function showFlash(message) {
+    if (!flash) {
+      return;
+    }
+
+    flash.textContent = message;
+    flash.classList.add("is-on");
+    window.clearTimeout(flashTimer);
+    flashTimer = window.setTimeout(() => {
+      flash.classList.remove("is-on");
+    }, 1600);
+  }
 
   button.addEventListener("click", async () => {
     const value = button.getAttribute("data-copy");
@@ -22,14 +36,16 @@ document.querySelectorAll(".copy-email").forEach((button) => {
         field.remove();
       }
 
-      button.textContent = "Copied!";
+      button.setAttribute("aria-label", "Copied");
+      showFlash("Copied!");
       window.setTimeout(() => {
-        button.textContent = original;
+        button.setAttribute("aria-label", "Copy email");
       }, 1600);
     } catch {
-      button.textContent = "Copy failed";
+      button.setAttribute("aria-label", "Copy failed");
+      showFlash("Copy failed");
       window.setTimeout(() => {
-        button.textContent = original;
+        button.setAttribute("aria-label", "Copy email");
       }, 1600);
     }
   });

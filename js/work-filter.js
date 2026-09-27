@@ -32,10 +32,10 @@ chips.forEach((chip) => {
 });
 
 const incoming = new URLSearchParams(window.location.search).get("filter");
-if (incoming) {
-  chips.forEach((chip) => {
-    chip.setAttribute("aria-pressed", String(chip.dataset.filter === incoming));
-  });
-}
+const start = incoming || "producer";
+
+chips.forEach((chip) => {
+  chip.setAttribute("aria-pressed", String(chip.dataset.filter === start));
+});
 
 applyFilter();
