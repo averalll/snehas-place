@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=entrance-sign1" />
+    <link rel="stylesheet" href="css/styles.css?v=entrance-v4" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-entrance">
@@ -32,22 +32,33 @@
       </nav>
     </header>
 
-    <a
-      class="entrance"
-      href="index.html"
-      aria-label="Enter Sneha's Place"
-    >
+    <div class="entrance">
       <img
         class="entrance-image"
-        src="assets/entrance-v2.png"
-        alt=""
+        src="assets/entrance-v4.jpg"
+        data-night-src="assets/entrance-v4-night.jpg"
+        alt="A wooden gate, a Press doorbell on the wall, and a tiled sign that reads Sneha Mendes, producer and screenwriter"
         width="1024"
-        height="719"
+        height="745"
       />
       <span class="entrance-caption">Sneha’s entry way</span>
-      <span class="entrance-overlay" aria-hidden="true"></span>
-      <span class="entrance-cta" aria-hidden="true">Enter Sneha's place</span>
-    </a>
+      <div class="doorbell-prompt">
+        <p class="doorbell-prompt-title">Hello, stranger</p>
+        <p class="doorbell-prompt-copy">
+          Welcome to my place. Ring the bell to enter.
+        </p>
+      </div>
+      <div class="doorbell-spot">
+        <button class="doorbell" type="button">
+          <span class="visually-hidden">Ring the doorbell</span>
+        </button>
+        <div class="doorbell-note">
+          <p class="room-note-label">The doorbell</p>
+          <p>Come on in.</p>
+          <a class="doorbell-enter" href="index.html">Enter Sneha's place</a>
+        </div>
+      </div>
+    </div>
     <footer class="site-footer">
       <div class="footer-brand">
         <a class="logo" href="entrance.html"><img src="assets/logo-script.png" alt="Sneha’s Place" width="950" height="136" /></a>
@@ -66,5 +77,7 @@
       </nav>
     </footer>
     <script src="js/site-menu.js"></script>
+    <script src="js/entrance-bell.js?v=press-bell"></script>
+    <script src="js/day-night.js"></script>
   </body>
 </html>

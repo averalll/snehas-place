@@ -1,0 +1,79 @@
+{
+  "projects": [
+    {
+      "title": "Vanity Fair x Lioness S2",
+      "tabs": [
+        "producer"
+      ],
+      "roles": [
+        "Co-Producer"
+      ],
+      "description": "A Vanity Fair film for Lioness Season 2.",
+      "company": "Wayward Three Films",
+      "director": "Lauren Bennett",
+      "cover": "/assets/work-1.png",
+      "video": "",
+      "about": "",
+      "gallery": [
+        "/assets/work-1.png",
+        "/assets/work-2.png",
+        "/assets/work-3.png"
+      ]
+    },
+    {
+      "title": "Vanity Fair x Lioness S2 (writing sample)",
+      "tabs": [
+        "writing"
+      ],
+      "roles": [
+        "Writer"
+      ],
+      "description": "A Vanity Fair film for Lioness Season 2.",
+      "company": "Wayward Three Films",
+      "director": "Lauren Bennett",
+      "cover": "/assets/work-2.png",
+      "video": "",
+      "about": "",
+      "gallery": []
+    },
+    {
+      "title": "Vanity Fair x Lioness S2 (both roles)",
+      "tabs": [
+        "producer",
+        "writing"
+      ],
+      "roles": [
+        "Co-Producer",
+        "Writer"
+      ],
+      "description": "A Vanity Fair film for Lioness Season 2.",
+      "company": "Wayward Three Films",
+      "director": "Lauren Bennett",
+      "cover": "/assets/work-3.png",
+      "video": "",
+      "about": "",
+      "gallery": []
+    },
+    {
+      "title": "Test 123",
+      "tabs": [
+        "producer",
+        "writing"
+      ],
+      "roles": [
+        "dgfrefgerg"
+      ],
+      "description": "",
+      "company": "",
+      "director": "",
+      "cover": "/assets/uploads/ChatGPT Image Oct 1, 2026, 03_30_02 PM.png",
+      "video": "",
+      "about": "",
+      "gallery": [
+        "/assets/uploads/ChatGPT Image Oct 1, 2026, 03_30_02 PM.png",
+        "/assets/uploads/ChatGPT Image Oct 1, 2026, 03_30_02 PM.png",
+        "/assets/uploads/ChatGPT Image Oct 1, 2026, 03_30_02 PM.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Sneha's Place content editor (Sveltia CMS).
+# Sneha signs in at /admin with GitHub. Every save is a commit to main,
+# and Vercel redeploys the site automatically (about a minute).
+
+backend:
+  name: github
+  repo: averalll/snehas-place
+  branch: main
+  base_url: https://snehas-place.vercel.app # where api/auth lives; change if you add a custom domain
+  auth_endpoint: api/auth
+  commit_messages:
+    update: "Update {{collection}} “{{slug}}” from the editor"
+
+site_url: https://snehas-place.vercel.app
+display_url: https://snehas-place.vercel.app
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: work
+    label: Work
+    description: Everything that shows on the Work page. Drag projects to change the order they appear in.
+    files:
+      - name: projects
+        label: My projects
+        file: content/work.json
+        fields:
+          - name: projects
+            label: Projects
+            label_singular: Project
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields:
+              - { name: title, label: Project title, widget: string }
+              - name: tabs
+                label: Which tab should it appear in?
+                widget: select
+                multiple: true
+                min: 1
+                default: [producer]
+                options:
+                  - { label: Producer, value: producer }
+                  - { label: Writer, value: writing }
+              - name: roles
+                label: My role(s)
+                label_singular: Role
+                widget: list
+                field: { name: role, label: Role, widget: string }
+                hint: "Shown as little tags, e.g. Co-Producer, Writer."
+              - { name: description, label: One-line description, widget: string, hint: Shows on the card. Say it in your voice! }
+              - { name: company, label: Production company, widget: string, required: false }
+              - { name: director, label: Director, widget: string, required: false }
+              - { name: cover, label: Cover image, widget: image, hint: The image on the Work card. Landscape works best. }
+              - { name: video, label: Video link, widget: string, required: false, hint: Paste a YouTube or Vimeo link and it'll play on the project page. }
+              - { name: about, label: About the project, widget: text, required: false, hint: The longer story for the project page. Leave a blank line between paragraphs. }
+              - { name: gallery, label: Stills and BTS, widget: image, multiple: true, required: false, hint: Drop in as many as you like. }

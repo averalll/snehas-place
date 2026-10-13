@@ -1,5 +1,4 @@
 const chips = document.querySelectorAll(".chip[data-filter]");
-const cards = document.querySelectorAll(".work-card[data-roles]");
 
 function activeFilters() {
   return [...chips]
@@ -7,16 +6,17 @@ function activeFilters() {
     .map((chip) => chip.dataset.filter);
 }
 
+// Cards are built from content/work.json, so look them up fresh each time.
 function applyFilter() {
   const selected = activeFilters();
-
-  cards.forEach((card) => {
+  document.querySelectorAll(".work-card[data-roles]").forEach((card) => {
     const roles = card.dataset.roles.split(/\s+/);
     const show =
       selected.length === 0 || selected.some((filter) => roles.includes(filter));
     card.hidden = !show;
   });
 }
+window.applyWorkFilter = applyFilter;
 
 chips.forEach((chip) => {
   chip.addEventListener("click", () => {
@@ -27,6 +27,11 @@ chips.forEach((chip) => {
     if (!alreadyOn) {
       chip.setAttribute("aria-pressed", "true");
     }
+    const url = new URL(window.location.href);
+    const on = activeFilters()[0];
+    if (on) url.searchParams.set("filter", on);
+    else url.searchParams.delete("filter");
+    history.replaceState(null, "", url);
     applyFilter();
   });
 });

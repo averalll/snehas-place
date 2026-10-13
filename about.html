@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=about-copy2" />
+    <link rel="stylesheet" href="css/styles.css?v=night-sky1" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-inner page-about">
@@ -74,17 +74,24 @@
       <div class="know-me-board">
         <img
           src="assets/about-board.jpg"
+          data-night-src="assets/about-board-night.jpg"
           alt="A corkboard above a desk, pinned with photos, tickets, and posters"
           width="1024"
           height="1024"
         />
         <button class="room-hotspot board-northern" type="button">
           <span class="visually-hidden">A note about The Northern Lights poster</span>
-          <span class="room-note">My Dream Destination</span>
+          <span class="room-note">
+            <span class="room-note-label">The Northern Lights</span>
+            My Dream Destination
+          </span>
         </button>
         <button class="room-hotspot board-cartier" type="button">
           <span class="visually-hidden">A note about the Cartier Crash and Cloche poster</span>
-          <span class="room-note">The coolest watch designs I have ever seen. They are brother and sister</span>
+          <span class="room-note">
+            <span class="room-note-label">Cartier Crash &amp; Cloche</span>
+            The coolest watch designs I have ever seen. They are brother and sister
+          </span>
         </button>
       </div>
     </main>
@@ -106,5 +113,6 @@
       </nav>
     </footer>
     <script src="js/site-menu.js"></script>
+    <script src="js/day-night.js"></script>
   </body>
 </html>

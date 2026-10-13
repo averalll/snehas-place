@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=welcome-note2" />
+    <link rel="stylesheet" href="css/styles.css?v=night-sky1" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body class="page-house">
@@ -34,16 +34,17 @@
 
     <main class="house">
       <div class="house-panel house-roof">
-        <img src="assets/room-roof-v3.png" alt="" width="1024" height="341" />
+        <img src="assets/room-roof-v3.png" data-night-src="assets/room-roof-v3-night.jpg" alt="" width="1024" height="341" />
         <span class="house-caption">Up on the roof</span>
       </div>
 
       <div class="house-panel house-living">
-        <img src="assets/room-living-v3.png" alt="" width="1024" height="576" />
+        <img src="assets/room-living-v4.jpg" data-night-src="assets/room-living-v4-night.jpg" alt="The living room, with paintings, a window to the beach, a piña colada, and a flip phone on the coffee table" width="1024" height="576" />
         <span class="house-caption">Living room</span>
         <button class="room-hotspot living-painting-left" type="button">
           <span class="visually-hidden">A note about the painting on the left</span>
           <span class="room-note">
+            <span class="room-note-label">The painting</span>
             It was the first painting that actually moved me, in my life. I
             like the emotion behind it. I like to see her keep going, despite
             the fact that everything she wants is so hard to reach.
@@ -52,17 +53,22 @@
         <button class="room-hotspot living-painting-right" type="button">
           <span class="visually-hidden">A note about the painting on the right</span>
           <span class="room-note">
+            <span class="room-note-label">The other painting</span>
             I didn’t care for this until I saw it in real life. It was
             mesmerizing
           </span>
         </button>
         <button class="room-hotspot living-window" type="button">
           <span class="visually-hidden">A note about the window</span>
-          <span class="room-note">I am from Goa, and this makes me feel at home</span>
+          <span class="room-note">
+            <span class="room-note-label">The window</span>
+            I am from Goa, and this makes me feel at home
+          </span>
         </button>
         <button class="room-hotspot living-drink" type="button">
           <span class="visually-hidden">A note about the piña colada</span>
           <span class="room-note">
+            <span class="room-note-label">Piña colada</span>
             The best drink you can drink and I think only the best Bartenders
             can make it. And I drank the best Pina Colada of my life at
             Attaboy in NYC
@@ -71,6 +77,7 @@
         <button class="room-hotspot living-phone" type="button">
           <span class="visually-hidden">A note about the phone on the table</span>
           <span class="room-note">
+            <span class="room-note-label">The phone</span>
             I miss when design looked like this. This was so cool to me,
             because now everything looks the same
           </span>
@@ -83,16 +90,72 @@
           href="work.html?filter=producer"
           aria-label="Producer work"
         >
-          <img src="assets/room-office-v3.png" alt="" width="1024" height="1024" />
+          <img src="assets/room-office-v4.jpg" data-night-src="assets/room-office-v4-night.jpg" alt="Sneha’s office, with a corkboard, a call sheet on the Mac, and a Goku figure on the desk" width="1024" height="1024" />
           <span class="entrance-overlay" aria-hidden="true"></span>
           <span class="entrance-cta" aria-hidden="true">Producer work</span>
         </a>
         <span class="house-caption">Sneha’s office</span>
-        <button class="room-hotspot office-hotspot" type="button">
-          <span class="visually-hidden">A note about the Twilight poster</span>
+        <button class="room-hotspot office-interview" type="button">
+          <span class="visually-hidden">A note about the Interview clipping</span>
           <span class="room-note">
-            This is an obsession I can’t shake; it went from ironic to
-            unironic and now it is my personality
+            <span class="room-note-label">Interview</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-miley" type="button">
+          <span class="visually-hidden">A note about the Miley Cyrus clipping</span>
+          <span class="room-note">
+            <span class="room-note-label">Miley Cyrus</span>
+            Every year I make a list of 50 people I want to work with, and
+            she’s always #1.
+          </span>
+        </button>
+        <button class="room-hotspot office-rolling" type="button">
+          <span class="visually-hidden">A note about the Rolling Stone clipping</span>
+          <span class="room-note">
+            <span class="room-note-label">Rolling Stone</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-tinydesk" type="button">
+          <span class="visually-hidden">A note about the Tiny Desk clipping</span>
+          <span class="room-note">
+            <span class="room-note-label">Tiny Desk</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-snl" type="button">
+          <span class="visually-hidden">A note about the SNL clipping</span>
+          <span class="room-note">
+            <span class="room-note-label">SNL</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-redbull" type="button">
+          <span class="visually-hidden">A note about the Red Bull clipping</span>
+          <span class="room-note">
+            <span class="room-note-label">Red Bull</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-aurora" type="button">
+          <span class="visually-hidden">A note about the Northern Lights photos</span>
+          <span class="room-note">
+            <span class="room-note-label">The Northern Lights</span>
+            My Dream Destination
+          </span>
+        </button>
+        <button class="room-hotspot office-callsheet" type="button">
+          <span class="visually-hidden">A note about the call sheet on the computer</span>
+          <span class="room-note">
+            <span class="room-note-label">Call sheet</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-goku" type="button">
+          <span class="visually-hidden">A note about the Goku figure</span>
+          <span class="room-note">
+            <span class="room-note-label">Goku</span>
+          </span>
+        </button>
+        <button class="room-hotspot office-headphones" type="button">
+          <span class="visually-hidden">A note about the headphones</span>
+          <span class="room-note">
+            <span class="room-note-label">Headphones</span>
           </span>
         </button>
       </div>
@@ -103,7 +166,7 @@
           href="work.html?filter=writing"
           aria-label="Writing work"
         >
-          <img src="assets/room-den-v3.png" alt="" width="1024" height="1024" />
+          <img src="assets/room-den-v4.jpg" data-night-src="assets/room-den-v4-night.jpg" alt="Sneha’s writing den, with bookshelves, a laptop on the coffee table, and a High School Musical pillow" width="1024" height="1024" />
           <span class="entrance-overlay" aria-hidden="true"></span>
           <span class="entrance-cta" aria-hidden="true">Writing work</span>
         </a>
@@ -112,20 +175,21 @@
 
       <div class="house-panel house-bedroom">
         <a href="about.html">
-          <img src="assets/room-bedroom-v4.png" alt="" width="1024" height="576" />
+          <img src="assets/room-bedroom-v4.png" data-night-src="assets/room-bedroom-v4-night.jpg" alt="" width="1024" height="576" />
         </a>
         <span class="house-caption">Sneha’s bedroom</span>
         <button class="room-hotspot bedroom-hsm" type="button">
           <span class="visually-hidden">A note about the High School Musical poster</span>
           <span class="room-note">
-            HIGH SCHOOL MUSICAL: Definitely formative for me — I used to
-            recreate scenes with my cousin where I was Troy and she was
-            Gabriella. A tween OBSESSION
+            <span class="room-note-label">High School Musical</span>
+            Definitely formative for me — I used to recreate scenes with my
+            cousin where I was Troy and she was Gabriella. A tween OBSESSION
           </span>
         </button>
         <button class="room-hotspot bedroom-tsitp" type="button">
           <span class="visually-hidden">A note about The Summer I Turned Pretty poster</span>
           <span class="room-note">
+            <span class="room-note-label">The Summer I Turned Pretty</span>
             I loved an obsession, as you can tell, and I love a fandom — I am
             part of all of them — but I love nothing more than a show that has
             the soundtrack to capture the exact moment of time we are in, and
@@ -136,6 +200,7 @@
         <button class="room-hotspot bedroom-lemonade" type="button">
           <span class="visually-hidden">A note about the Beyoncé Lemonade poster</span>
           <span class="room-note">
+            <span class="room-note-label">Lemonade</span>
             This concept album made me take high-concept music videos seriously,
             like they were short films
           </span>
@@ -174,5 +239,6 @@
     <script src="js/site-menu.js"></script>
     <script src="js/room-enter.js"></script>
     <script src="js/welcome-note.js"></script>
+    <script src="js/day-night.js"></script>
   </body>
 </html>
