@@ -48,9 +48,8 @@ body.page-house {
 }
 
 body.page-entrance {
-  height: auto;
-  min-height: 100dvh;
-  overflow: auto;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 img {
@@ -200,9 +199,9 @@ a {
 
 .entrance {
   position: relative;
-  flex: 0 0 auto;
+  flex: 1;
+  min-height: 0;
   width: 100%;
-  aspect-ratio: 1024 / 745;
   display: block;
   overflow: hidden;
   border-radius: 4px;
