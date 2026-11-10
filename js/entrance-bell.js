@@ -5,7 +5,7 @@ const bell = document.querySelector(".doorbell");
 const go = document.querySelector(".doorbell-enter");
 
 if (entrance && image && spot && bell && go) {
-  const BELL = { x: 0.416, y: 0.515, w: 0.06, h: 0.16 };
+  const BELL = { x: 0.413, y: 0.515, w: 0.06, h: 0.16 };
 
   function parsePos(value) {
     const n = Number.parseFloat(value);

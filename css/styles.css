@@ -48,8 +48,9 @@ body.page-house {
 }
 
 body.page-entrance {
-  height: 100dvh;
-  overflow: hidden;
+  height: auto;
+  min-height: 100dvh;
+  overflow: auto;
 }
 
 img {
@@ -199,9 +200,9 @@ a {
 
 .entrance {
   position: relative;
-  flex: 1;
-  min-height: 0;
+  flex: 0 0 auto;
   width: 100%;
+  aspect-ratio: 1024 / 745;
   display: block;
   overflow: hidden;
   border-radius: 4px;
@@ -1380,24 +1381,24 @@ html:not(.js) .entrance:hover .entrance-cta {
 }
 
 .bedroom-hsm {
-  left: 47.5%;
-  top: 5%;
-  width: 10%;
-  height: 26%;
+  left: 51.5%;
+  top: 6%;
+  width: 8.6%;
+  height: 21%;
 }
 
 .bedroom-tsitp {
-  left: 38%;
-  top: 7%;
-  width: 9%;
-  height: 22%;
+  left: 41.2%;
+  top: 9%;
+  width: 8%;
+  height: 19%;
 }
 
 .bedroom-lemonade {
-  left: 37.4%;
-  top: 29.5%;
-  width: 10%;
-  height: 25%;
+  left: 41%;
+  top: 31.5%;
+  width: 8.4%;
+  height: 21%;
 }
 
 .board-northern {
@@ -1966,18 +1967,18 @@ html:not(.js) .entrance:hover .entrance-cta {
   }
 
   .bedroom-hsm {
-    width: 14%;
-    height: 28%;
+    width: 10%;
+    height: 23%;
   }
 
   .bedroom-tsitp {
-    width: 13%;
-    height: 24%;
+    width: 9.4%;
+    height: 21%;
   }
 
   .bedroom-lemonade {
-    width: 13%;
-    height: 26%;
+    width: 9.6%;
+    height: 23%;
   }
 
   .board-northern {
