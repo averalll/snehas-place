@@ -5,7 +5,9 @@ const bell = document.querySelector(".doorbell");
 const go = document.querySelector(".doorbell-enter");
 
 if (entrance && image && spot && bell && go) {
-  const BELL = { x: 0.413, y: 0.515, w: 0.06, h: 0.16 };
+  const BELL_DESK = { x: 0.413, y: 0.515, w: 0.06, h: 0.16 };
+  const BELL_MOBILE = { x: 0.178, y: 0.51, w: 0.17, h: 0.19 };
+  const mobileEntrance = window.matchMedia("(max-width: 760px)");
 
   function parsePos(value) {
     const n = Number.parseFloat(value);
@@ -30,10 +32,11 @@ if (entrance && image && spot && bell && go) {
     const offsetX = (cw - dw) * ox;
     const offsetY = (ch - dh) * oy;
 
-    const width = Math.max(44, BELL.w * nw * scale);
-    const height = Math.max(44, BELL.h * nh * scale);
-    const left = offsetX + BELL.x * nw * scale - width / 2;
-    const top = offsetY + BELL.y * nh * scale - height / 2;
+    const bell = mobileEntrance.matches ? BELL_MOBILE : BELL_DESK;
+    const width = Math.max(44, bell.w * nw * scale);
+    const height = Math.max(44, bell.h * nh * scale);
+    const left = offsetX + bell.x * nw * scale - width / 2;
+    const top = offsetY + bell.y * nh * scale - height / 2;
 
     spot.style.left = `${left}px`;
     spot.style.top = `${top}px`;
@@ -83,11 +86,11 @@ if (entrance && image && spot && bell && go) {
 
   bell.addEventListener("click", unlock);
 
+  image.addEventListener("load", placeBell);
   if (image.complete) {
     placeBell();
-  } else {
-    image.addEventListener("load", placeBell);
   }
 
   window.addEventListener("resize", placeBell);
+  mobileEntrance.addEventListener("change", placeBell);
 }

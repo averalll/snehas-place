@@ -104,12 +104,21 @@
     root.dispatchEvent(new CustomEvent("skychange", { detail: { sky: next } }));
   }
 
+  const mobileEntrance = window.matchMedia("(max-width: 760px)");
+
+  function chosenSrc(img, night) {
+    if (!img.dataset.daySrc) {
+      img.dataset.daySrc = img.getAttribute("src");
+    }
+    if (mobileEntrance.matches && img.dataset.mobileSrc) {
+      return img.dataset.mobileSrc;
+    }
+    return night ? img.getAttribute("data-night-src") : img.dataset.daySrc;
+  }
+
   function swapImages(night) {
     document.querySelectorAll("img[data-night-src]").forEach((img) => {
-      if (!img.dataset.daySrc) {
-        img.dataset.daySrc = img.getAttribute("src");
-      }
-      const target = night ? img.getAttribute("data-night-src") : img.dataset.daySrc;
+      const target = chosenSrc(img, night);
       if (target && img.getAttribute("src") !== target) {
         img.setAttribute("src", target);
       }
@@ -118,6 +127,9 @@
 
   function preloadNight() {
     document.querySelectorAll("img[data-night-src]").forEach((img) => {
+      if (mobileEntrance.matches && img.dataset.mobileSrc) {
+        return;
+      }
       const src = img.getAttribute("data-night-src");
       if (!src) {
         return;
@@ -140,4 +152,11 @@
 
   const guessed = guessCoords();
   run(guessed.latitude, guessed.longitude);
+
+  function syncEntranceFrame() {
+    swapImages(document.documentElement.dataset.sky === "night");
+  }
+
+  mobileEntrance.addEventListener("change", syncEntranceFrame);
+  window.addEventListener("resize", syncEntranceFrame);
 })();

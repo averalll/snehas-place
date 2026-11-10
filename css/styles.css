@@ -1791,7 +1791,7 @@ html:not(.js) .entrance:hover .entrance-cta {
   }
 
   .entrance-image {
-    object-position: 42% 48%;
+    object-position: center;
   }
 
   .doorbell-prompt {
@@ -1806,7 +1806,13 @@ html:not(.js) .entrance:hover .entrance-cta {
   }
 
   .doorbell-note {
-    max-width: min(15rem, 78vw);
+    left: 0;
+    max-width: min(15rem, calc(100vw - 2.4rem));
+    transform: translate(0, 8px);
+  }
+
+  .entrance.is-open .doorbell-note {
+    transform: translate(0, 0);
   }
 
   .entrance .entrance-overlay {
@@ -1911,7 +1917,9 @@ html:not(.js) .entrance:hover .entrance-cta {
   }
 
   .contact-main {
-    grid-template-rows: auto minmax(16rem, 1fr);
+    grid-template-rows: auto auto;
+    width: 100%;
+    min-width: 0;
   }
 
   .know-me {
@@ -1927,12 +1935,41 @@ html:not(.js) .entrance:hover .entrance-cta {
     padding: 1.4rem 1.2rem 1.4rem;
   }
 
+  .contact-copy,
+  .contact-form,
+  .lede {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-direct {
+    flex-wrap: wrap;
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  .contact-direct a {
+    overflow-wrap: anywhere;
+  }
+
   .know-me-board {
     min-height: 22rem;
   }
 
   .contact-picture {
-    min-height: 16rem;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1;
+    align-self: start;
   }
 
   .living-painting-left {
