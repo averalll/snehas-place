@@ -5,7 +5,7 @@ const bell = document.querySelector(".doorbell");
 const go = document.querySelector(".doorbell-enter");
 
 if (entrance && image && spot && bell && go) {
-  const BELL_DESK = { x: 0.413, y: 0.515, w: 0.06, h: 0.16 };
+  const BELL_DESK = { x: 0.396, y: 0.584, w: 0.08, h: 0.25 };
   const BELL_MOBILE = { x: 0.178, y: 0.51, w: 0.17, h: 0.19 };
   const mobileEntrance = window.matchMedia("(max-width: 760px)");
 
@@ -16,7 +16,7 @@ if (entrance && image && spot && bell && go) {
 
   function placeBell() {
     const nw = image.naturalWidth || 1024;
-    const nh = image.naturalHeight || 745;
+    const nh = image.naturalHeight || 469;
     const cw = image.clientWidth;
     const ch = image.clientHeight;
     if (!cw || !ch) {
